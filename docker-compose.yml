@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  # 後端服務
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    restart: always
+
+  # 前端服務
+  frontend:
+    build: ./frontend/my-ai-app
+    ports:
+      - "80:80"  # 瀏覽器直接輸入 http://localhost 就能看到網頁
+    restart: always
+    depends_on:
+      - backend  # 確保後端先啟動，前端再啟動
