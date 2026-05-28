@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
-import './App.css'; // 引入你的 CSS 檔案
+import './app.css'; // 引入你的 CSS 檔案
 
-const API_URL = 'http://127.0.0.1:8000/predict';
+const API_URL = 'http://140.115.202.25:8000/predict';
 
 export default function App() {
   // --- 狀態管理 (State) ---
